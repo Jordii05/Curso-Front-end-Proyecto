@@ -12,8 +12,6 @@ body{
 }
 
 #contenedor{
-    width: 70%;
-    height: auto;
     margin: auto;
     /* border: 2px solid red; */
     box-shadow: 0 0 50px black;
@@ -37,7 +35,6 @@ body{
     display: flex;
     justify-content: space-around;
     width: 12.5em;
-    margin-left: 10%;
     /* border: 1px solid blue; */
 
 }
@@ -52,11 +49,10 @@ body{
     transform: scale(1.2);
     transition: 0.5s;
 }
-#nav-sociales ul{
+#nav-sociales #carrito{
     display: flex;
     justify-content: flex-end;
     width: auto;
-    margin-right: 10%;
     /* border: 1px solid blue; */
 
 }
@@ -69,17 +65,15 @@ body{
 
 
 #titulo{
-    font-family: 'Courier New', Courier, monospace;
-    width: 100%;
-    margin: auto;
+    
     /* border: 1px solid red; */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
 
 #nosotros{
-    font-size: 2.3em;
     font-family: Georgia, 'Times New Roman', Times, serif  ;
     text-align: center;
     /* border: 1px solid red; */
@@ -135,10 +129,8 @@ body{
 }
 
 #presentacion{
-    font-size: 1.7em;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif  ;
-    padding: 1.3em;
 }
 
 
@@ -162,12 +154,9 @@ body{
     margin: auto;
     padding: 0.5em;
 }
-#lider,#reunion{
-    width: 20em;
-}
 
 #reunion{
-    margin: 0.5em;
+
     border-radius: 0.8em    ;
 }
 
@@ -184,12 +173,10 @@ body{
 }
 
 #reseñas{
-    width: 81%;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: auto;
-    align-items: center;
-    height: 10em;
     border-radius: 0.8em    ;
     /* border: 1px solid red; */
 }
@@ -201,10 +188,7 @@ body{
     text-align: center;
     box-shadow: 0 0 0.2em black;
     border-radius: 0.8em    ;
-    height: 6em;
-    width: 50%;
     vertical-align: middle;
-    font-size: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0.5em;
     padding: 0.2em;
@@ -303,8 +287,7 @@ body{
     letter-spacing: 3px;
     font-family: Georgia, 'Times New Roman', Times, serif  ;
     /* border: 1px solid red; */
-    width: 60%;
-    margin:auto;
+    
     border-top-left-radius: 3em;
     border-top-right-radius: 3em;
     background-color: rgb(51, 64, 252);
@@ -315,8 +298,7 @@ body{
     letter-spacing: 3px;
     font-family: Georgia, 'Times New Roman', Times, serif  ;
     /* border: 1px solid red; */
-    width: 60%;
-    margin:auto;
+    
     border-top-left-radius: 3em;
     border-top-right-radius: 3em;
     background-color: rgb(252, 51, 51);
@@ -324,7 +306,7 @@ body{
 }
 
 .productosDestacados{
-    width: 80%;
+    width: 95%;
     margin: auto;
     text-align: center;
     /* border: 1px solid red; */
@@ -335,11 +317,13 @@ body{
     display: flex;
     width: 70%;
     margin: 0.5em auto;
+    vertical-align: middle;
     justify-content: space-between;
     align-items: center;
     /* border: 1px solid red; */
     
 }
+
 
 .producto .detalles h4 a{
     text-decoration: none;
@@ -365,7 +349,10 @@ body{
     margin: 1em;
     border: 1px solid red;
     position: relative;
-
+    padding: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .producto h3{
@@ -391,6 +378,7 @@ body{
     background: rgba(255, 255, 255,0);
     z-index: 2;
     position: relative;
+    /* border: 1px solid red; */
 }
 
 
@@ -572,17 +560,11 @@ input{
     height: auto;
 }
 
-.informacion-contacto{
-    /* border: 1px solid red; */
-
-    margin: auto;
-}
-
 .informacion-contacto a{
     color: #131313;
 }
 
-@media screen and (min-width:268px) and (max-width:768px){
+@media screen  and (max-width:768px){
     
     #contenedor{
         width: 100%;
@@ -590,20 +572,14 @@ input{
 
     #nosotros{
         font-size: 1.7em;
-        font-family: Georgia, 'Times New Roman', Times, serif  ;
-        text-align: center;
-        /* border: 1px solid red; */
+
     }
 
     #titulo{
-        font-family: 'Courier New', Courier, monospace;
         width: 100%;
         margin: auto;
         /* border: 1px solid red; */
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        vertical-align: middle;
+
         padding: 4em 0.5em 0 0.5em;
         flex-wrap: wrap;
         gap: 0.5em;
@@ -612,24 +588,45 @@ input{
     #encabezado{
         width: 100%;
     }
-
-
+    #nav-sociales #redes{
+        margin-left: 5%;
+    }
+    #nav-sociales #carrito{
+        margin-right: 5%;
+    }
     .botonera ul{
         list-style: none;
         text-transform: uppercase;
         justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+
     }
 
+    .botonera{
+        height: auto;
+    }
+
+    #presentacion{
+        font-size: 1.7em;
+        padding: 1.3em;
+    }
     .articulo1{
 
         display: flex;
         flex-wrap: wrap;
     }
-    #lider,#reunion{
-        width: 15em;
+    #lider{
+        width: 70%;
+        max-width: 20em;
         margin: auto;
     }
 
+    #reunion{
+        width: 70%;
+        max-width: 25em;
+        margin: auto;
+    }
     .descripciones{
         font-size: 1.2em;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -644,10 +641,10 @@ input{
     #reseñas{
         width: 80%;
         height: 20%;
-        flex-wrap: wrap;
-        display: flex;
-        margin: auto;
     }
+
+
+
     .reseña{
         width: 100%;
         height: auto;
@@ -661,6 +658,14 @@ input{
         justify-content: space-between;
     }
 
+    .valoracion{
+        display: flex;
+        flex-wrap: wrap;
+        /* border: 1px solid red; */
+        height: auto;
+        justify-content:space-around;
+    }
+
     .valoracion .cinco{
         width: 5em;
     }
@@ -670,6 +675,7 @@ input{
     }
     .valoracion .pulgares{
         width: 4em;
+        /* margin: auto; */
     }
 
     #productosDestacados{
@@ -677,7 +683,16 @@ input{
     }
 
     #destacados{
-        font-size: 2em;
+        font-size: 1.5em;
+        width: auto;
+        height: auto;
+    }
+
+    #conDescuento{
+        font-size: 1.5em;
+
+        width: auto;
+        height: auto;
     }
 
     .productos,.nuevo{
@@ -690,6 +705,7 @@ input{
         margin: auto;
         height: 31em;
         align-content: center;
+        
     }
     .imagen{
         width: 80%;
@@ -705,6 +721,10 @@ input{
 
     .producto{
         margin: 1em auto;
+    }
+
+    #datos{
+        height: auto;
     }
 
     #contacto {
@@ -723,16 +743,17 @@ input{
     }
     
     .contacto-contenido {
-        width: 70%;
+        width: auto;
         
         /* border: 1px solid red; */
-        padding: 1em;
+        padding: 0;
     
-        
+
     }
     
     .informacion-contacto{
         margin: 0;
+        /* border: 1px solid red; */
     }
 
     .informacion-contacto img{
@@ -751,6 +772,7 @@ input{
     
     .contacto-contenido .atencion h4{
         font-size: 1.2em;
+        margin-top: 0.3em;
     }
     
     .contacto-contenido .informacion-contacto p{
@@ -766,6 +788,13 @@ input{
     
     #contenedor{
         width: 90%;
+    }
+
+    #nav-sociales #redes{
+        margin-left: 6%;
+    }
+    #nav-sociales #carrito{
+        margin-right: 6%;
     }
 
     #nosotros{
@@ -792,6 +821,13 @@ input{
     #encabezado{
         width: 100%;
     }
+
+
+    #presentacion{
+        font-size: 1.7em;
+        padding: 1.3em;
+    }
+
     .descripciones{
         font-size: 1.5em;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -808,9 +844,9 @@ input{
     }
 
     #reunion{
-        padding-top: 0.8em;
+        /* padding-top: 0.8em; */
         width: 28em;
-        margin: auto;
+        margin: 0.5em auto;
     }
 
     #opinion>h3{
@@ -865,7 +901,7 @@ input{
         
     }
 
-
+    
 
     .imagen{
         width: 80%;
@@ -933,28 +969,27 @@ input{
 
     #contenedor{
         width: 80%;
+        
+    }
+
+    #nav-sociales #redes{
+        margin-left: 10%;
+    }
+    #nav-sociales #carrito{
+        margin-right: 11%;
     }
 
     #nosotros{
         font-size: 1.7em;
-        font-family: Georgia, 'Times New Roman', Times, serif  ;
-        text-align: center;
-        /* border: 1px solid red; */
         width: auto;
         padding-top: 0.5em;
     }
     
     #titulo{
-        font-family: 'Courier New', Courier, monospace;
         width: 100%;
         margin: auto;
         /* border: 1px solid red; */
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        vertical-align: middle;
         padding: 3em 0 0 0;
-        flex-wrap: wrap;
         gap: 0.5em;
     }
 
@@ -965,7 +1000,10 @@ input{
     #encabezado{
         width: 70%;
     }
-
+    #presentacion{
+        font-size: 1.7em;
+        padding: 1.3em;
+    }
     #lider,#reunion{
         width: 40%;
     }
@@ -982,12 +1020,13 @@ input{
     }
     
     .reseña {
-        text-align: center;
         height: auto;
         width: 30%;
         display: flex;
         flex-direction: column;
         justify-content: space-around; 
+        margin: 0.5em;
+        padding: 0.2em;
     }
 
     .valoracion{
@@ -1016,7 +1055,8 @@ input{
         /* border: 1px solid red; */
     }
     .producto, .nuevo{
-        width:23em;
+        width:20em;
+        height: auto;
 
     }
     .productos, .nuevos{
