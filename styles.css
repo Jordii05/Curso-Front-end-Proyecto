@@ -374,7 +374,7 @@ body{
 .imagen, .imagenNuevo{
     width: 80%;
     height: 15em;
-    margin: 1em;
+    margin: auto;
     background: rgba(255, 255, 255,0);
     z-index: 2;
     position: relative;
