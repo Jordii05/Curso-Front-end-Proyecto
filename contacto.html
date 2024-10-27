@@ -41,7 +41,7 @@
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main">
 
         <form id="formulario" action="https://formsubmit.co/jorcaslo05@gmail.com" method="post">
 
@@ -49,15 +49,31 @@
             <div id="campos">
                 <label for="nombre">Nombre</label><input id="nombre" type="text" placeholder="Ingrese su nombre" required>
                 <label for="email">Email</label><input id="email" type="email" placeholder="Ingrese su email" required >
+
+                <label for="consulta">Ingrese su consulta</label>
+
                 <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su comentario..."required></textarea>
 
-                <button type="submit">Enviar</button>
+                <button id="enviar" type="submit">Enviar</button>
             </div>
         </form>
 
 
     </main>
     <footer id="contacto">
+        <h3>Información de Contacto</h3>
+        <div class="contacto-contenido">
+            <div class="informacion-contacto">
+                <p><strong>Correo Electrónico:</strong><br> <a href="mailto:contacto@tuempresa.com">contactoEstilo@gmail.com</a></p>
+                <p><strong>Teléfono:</strong><img src="img/telefono.png" alt="" ><br> <a href="tel:+541112345678">+54 11 1234 5678</a></p>
+            </div>
+    
+            <div class="atencion">
+                <h4>Horario de Atención:</h4>
+                <p>Lunes a Viernes:<br> 9:00 am - 6:00 pm</p>
+                <p>Sábado:<br> 10:00 am - 2:00 pm</p>
+            </div>
+        </div>
         <p>Nos comunicaremos a la brevedad, disculpe las molestias</p>
     </footer>
 </div>
