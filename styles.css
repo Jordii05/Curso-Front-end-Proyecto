@@ -566,6 +566,10 @@ input{
 
 @media screen  and (max-width:768px){
     
+    body{
+        min-width: 20em;
+    }
+
     #contenedor{
         width: 100%;
     }
