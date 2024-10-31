@@ -92,7 +92,9 @@ body{
     /* border: 1px solid red; */
     height: 2.5em;
     background: linear-gradient(rgb(102, 102, 102), rgba(255, 255, 255, 1));
-    
+    position:sticky;
+    z-index: 10;
+
 }
 
 .botonera ul{
@@ -609,6 +611,7 @@ input{
 
     .botonera{
         height: auto;
+        top: 3em;
     }
 
     #presentacion{
@@ -826,7 +829,9 @@ input{
         width: 100%;
     }
 
-
+    .botonera{
+        top: 3.15em;
+    }
     #presentacion{
         font-size: 1.7em;
         padding: 1.3em;
@@ -997,7 +1002,9 @@ input{
         gap: 0.5em;
     }
 
-
+    .botonera{
+        top:3.6%;
+    }
     .botonera ul li a{
         font-size: 1.3em;
     }
