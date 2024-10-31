@@ -1003,7 +1003,7 @@ input{
     }
 
     .botonera{
-        top:3.6%;
+        position:static;
     }
     .botonera ul li a{
         font-size: 1.3em;
