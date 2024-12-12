@@ -63,6 +63,18 @@ body{
     /* border: 1px solid red; */
 }
 
+#cantidadProductos{
+  font-size: 1.2em;
+  color: black;
+  display: flex;
+  position: absolute;
+  margin-top: 0.2em;
+  font-weight: 900;
+  background-color: red;
+  border-radius: 0.5em;
+
+}
+
 
 #titulo{
     

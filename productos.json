@@ -1,0 +1,161 @@
+{
+  "productosDestacados": [
+    {
+      "id": 1,
+      "titulo": "Remera Basica Black",
+      "imagen": "img/imagen1.png",
+      "alt": "Imagen 1",
+      "precio": 9000,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Remera Negra OSO",
+      "imagen": "img/imagen2.png",
+      "alt": "Remera Negra OSO",
+      "precio": 12500,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Remera Basica Marron",
+      "imagen": "img/imagen3.png",
+      "alt": "Imagen 3",
+      "precio": 10000,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Pantalon Cargo Negro",
+      "imagen": "img/imagen4.png",
+      "alt": "Imagen 4",
+      "precio": 17000,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "Buzo Oversize CHAOS",
+      "imagen": "img/imagen5.png",
+      "alt": "Buzo Oversize CHAOS",
+      "precio": 19000,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 6,
+      "titulo": "Pantalon Cargo Militar",
+      "imagen": "img/imagen6.png",
+      "alt": "Imagen 6",
+      "precio": 22000,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 7,
+      "titulo": "Zapatillas Spiral",
+      "imagen": "img/imagen7.png",
+      "alt": "Zapatillas Spiral",
+      "precio": 60000,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 8,
+      "titulo": "Vans Old Skool Amarillas",
+      "imagen": "img/imagen8.jpg",
+      "alt": "Zapatillas Vans Old Skool",
+      "precio": 75000,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 9,
+      "titulo": "Nike SB Dunk",
+      "imagen": "img/imagen9.png",
+      "alt": "Nike SB Dunk",
+      "precio": 79000,
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    }
+  ],
+  "productosConDescuento": [
+    {
+      "id": 10,
+      "titulo": "Buzo Oversize Azul",
+      "imagenes": {
+        "sale": "img/sale.png",
+        "producto": "img/nuevo1.png"
+      },
+      "alt": "Buzo Oversize Azul",
+      "precios": {
+        "sinDescuento": 19000,
+        "conDescuento": 18100
+      },
+      "descuento": "10% OFF",
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 11,
+      "titulo": "Buzo Hoodie Oversize",
+      "imagenes": {
+        "sale": "img/sale.png",
+        "producto": "img/nuevo2.png"
+      },
+      "alt": "Buzo Hoodie Oversize",
+      "precios": {
+        "sinDescuento": 25000,
+        "conDescuento": 20000
+      },
+      "descuento": "20% OFF",
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    },
+    {
+      "id": 12,
+      "titulo": "Pantalón Mom",
+      "imagenes": {
+        "sale": "img/sale.png",
+        "producto": "img/nuevo3.png"
+      },
+      "alt": "Mom Baggy beige",
+      "precios": {
+        "sinDescuento": 31000,
+        "conDescuento": 23250
+      },
+      "descuento": "25% OFF",
+      "detalles": {
+        "carrito": "Agregar al carrito",
+        "enlace": "Ver detalles"
+      }
+    }
+  ]
+}
+
+
