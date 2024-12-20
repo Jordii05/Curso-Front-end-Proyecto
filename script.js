@@ -257,7 +257,7 @@ document.addEventListener("click", (event) => {
 
 mostrarCarrito();
 
-function modificarCantidad() {}
+function modificarCantidad() {}//terminar esto
 
 //inicializaciones
 
