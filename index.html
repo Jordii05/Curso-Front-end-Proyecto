@@ -1,148 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda Oficial</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/favicon.ico">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="img/favicon.ico" />
+  </head>
+  <body>
     <!-- abro nav-sociales -->
     <div id="nav-sociales">
+      <ul id="redes">
+        <li>
+          <a href="https://es-la.facebook.com/" target="_blank"
+            ><img src="img/facebook.png" width="35" height="35" alt="facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/" target="_blank"
+            ><img src="img/youtube.png" width="35" height="35" border="0"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://accounts.google.com/signin/v2/identifier?faa=1&rip=1&continue=https%3A//accounts.google.com/gsi/select?client_id=49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com&ux_mode=popup&ui_mode=card&as=Rwa%2BP8LQvDwSXxUoF46nTw&channel_id=3184ec3ae18b9fe3f384484e187c3344b0c0169c0e4424746b83274d23be4b74&origin=https%3A//twitter.com&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+            target="_blank"
+            ><img src="img/twitter.png" width="35" height="35"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img src="img/instagram.png" width="35" height="35"
+          /></a>
+        </li>
+      </ul>
+
+      <ul id="carrito">
         
-        <ul id="redes">
-        
-            <li><a href="https://es-la.facebook.com/" target="_blank"><img src="img/facebook.png" width="35" height="35" alt="facebook"></a></li>
-            <li><a href="https://www.youtube.com/" target="_blank"><img src="img/youtube.png" width="35" height="35" border="0"></a></li>
-            <li><a href="https://accounts.google.com/signin/v2/identifier?faa=1&rip=1&continue=https%3A//accounts.google.com/gsi/select?client_id=49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com&ux_mode=popup&ui_mode=card&as=Rwa%2BP8LQvDwSXxUoF46nTw&channel_id=3184ec3ae18b9fe3f384484e187c3344b0c0169c0e4424746b83274d23be4b74&origin=https%3A//twitter.com&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank"><img src="img/twitter.png" width="35" height="35"></a></li>
-            <li><a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" width="35" height="35"></a></li>
+        <h4 id="cantidadProductos">0</h4>
+        <li>
+          <a href="carrito.html">
+            <img src="img/carrito.png" alt="Ver Carrito" width="35px"/></a>
+        </li>
+      </ul>
+    </div>
+    <!--Cierra nav-sociales-->
+
+    <!-- Abro contenedor -->
+    <div id="contenedor">
+      <!-- abro encabezado -->
+      <header id="titulo">
+        <h1 id="nosotros">
+          Tienda Oficial<br />
+          E-commerce de EstiloUrbano
+        </h1>
+        <img id="encabezado" src="img/header.png" alt="Logo empresa" />
+      </header>
+      <!-- cierro encabezado -->
+
+      <nav class="botonera">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
+      </nav>
 
-        <ul id="carrito">
-            <li><a href="carrito.html" ><img src="img/carrito.png" alt="Ver Carrito" width="35px"></a></li>
-        </ul>
+      <!-- abro main -->
+      <main id="main">
+        <h2 id="presentacion">¿Quienes Somos?</h2>
+        <section class="quienes-somos">
+          <article class="articulo1">
+            <p class="descripciones">
+              En EstiloUrbano, somos una tienda de e-commerce apasionada por
+              ofrecer las últimas tendencias en moda urbana, adaptadas a un
+              estilo de vida dinámico, moderno y auténtico. Nuestro objetivo es
+              proporcionarte prendas de calidad que te permitan expresar tu
+              individualidad y sentirte cómodo en cualquier ocasión.
+            </p>
+            <img
+              id="lider"
+              src="img/liderEmpresa.png"
+              alt="Creador de Empresa"
+            />
+          </article>
 
-    </div><!--Cierra nav-sociales-->
+          <article class="articulo1">
+            <img id="reunion" src="img/reunion.jpeg" alt="Reunion de empresa" />
+            <p class="descripciones">
+              En esta imagen capturamos un momento clave de nuestro equipo
+              durante una de nuestras reuniones creativas. Aquí, nuestros
+              diseñadores, estrategas de marketing y especialistas en tendencias
+              de moda se unen para compartir ideas y colaborar en los próximos
+              lanzamientos de la temporada.
+            </p>
+          </article>
+        </section>
 
-<!-- Abro contenedor -->
-    <div id="contenedor"> 
-        
-        <!-- abro encabezado -->
-        <header id="titulo"> 
-            
-            <h1 id="nosotros">Tienda Oficial<br> E-commerce de EstiloUrbano</h1>
-            <img id="encabezado" src="img/header.png" alt="Logo empresa"  >
-        </header>
-        <!-- cierro encabezado -->
+        <div id="opinion">
+          <h3>Algunas reseñas...</h3>
 
-        
-        <nav class="botonera">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+          <section id="reseñas">
+            <article class="reseña">
+              <h3>Luciano Martinez</h3>
+              <p>
+                "¡Me encantó la experiencia de compra en EstiloUrbano! El sitio
+                es súper fácil de navegar y encontré exactamente lo que buscaba
+                en segundos. Las prendas llegaron rápido y la calidad es
+                impresionante"
+              </p>
+              <div class="valoracion">
+                <div class="pulgares">
+                  <a href="#pulgarArriba"
+                    ><img
+                      class="pulgarArriba"
+                      src="img/pulgarArriba.png"
+                      alt=""
+                  /></a>
+                  <a href="#pulgarAbajo"
+                    ><img class="pulgarAbajo" src="img/pulgarAbajo.png" alt=""
+                  /></a>
+                </div>
+                <img
+                  class="cinco"
+                  src="img/cincoEstrellas.png"
+                  alt="Valoracion: cinco estrellas"
+                />
+              </div>
+            </article>
 
-        <!-- abro main -->
-        <main id="main">
+            <article class="reseña">
+              <h3>Claudia Ledesma</h3>
+              <p>
+                "Me gustó mucho el diseño de los pantalones MOM que compré. Me
+                hubiera gustado ver más opciones en cuanto a estilos, pero la
+                tienda es excelente!"
+              </p>
+              <div class="valoracion">
+                <div class="pulgares">
+                  <a href="#pulgarArriba"
+                    ><img
+                      class="pulgarArriba"
+                      src="img/pulgarArriba.png"
+                      alt=""
+                  /></a>
+                  <a href="#pulgarAbajo"
+                    ><img class="pulgarAbajo" src="img/pulgarAbajo.png" alt=""
+                  /></a>
+                </div>
+                <img
+                  class="cuatro"
+                  src="img/cuatroEstrellas.png"
+                  alt="Valoracion: cinco estrellas"
+                />
+              </div>
+            </article>
 
-            <h2 id="presentacion">¿Quienes Somos?</h2>
-            <section class="quienes-somos">
-
-                <article class="articulo1">
-                    <p class="descripciones">
-                        En EstiloUrbano, somos una tienda de e-commerce apasionada por ofrecer las últimas 
-                        tendencias en moda urbana, adaptadas a un estilo de vida dinámico, moderno y auténtico. Nuestro objetivo es 
-                        proporcionarte prendas de calidad que te permitan 
-                        expresar tu individualidad y sentirte cómodo en cualquier ocasión.
-                    </p>
-                    <img id="lider" src="img/liderEmpresa.png" alt="Creador de Empresa" >
-                </article>
-
-                <article class="articulo1">
-                    
-                    
-                    <img id="reunion" src="img/reunion.jpeg" alt="Reunion de empresa" >
-                    <p class="descripciones">En esta imagen capturamos un momento clave de nuestro equipo durante una de nuestras reuniones creativas. 
-                        Aquí, nuestros diseñadores, estrategas de marketing y especialistas en tendencias de moda se unen para compartir ideas y colaborar 
-                        en los próximos lanzamientos de la temporada.
-                    </p>
-                </article>
-
-            </section>
-
-
-
-            
-            <div id="opinion">
-                <h3>Algunas reseñas...</h3>
-
-                <section id="reseñas">
-
-                    <article class="reseña">
-                        <h3>Luciano Martinez</h3>
-                        <p>"¡Me encantó la experiencia de compra en EstiloUrbano! El sitio es súper fácil de navegar y encontré exactamente lo que buscaba en segundos. Las prendas 
-                            llegaron rápido y la calidad es impresionante"</p>
-                            <div class="valoracion">
-                                <div class="pulgares">
-                                    <a href="#pulgarArriba"><img class="pulgarArriba" src="img/pulgarArriba.png" alt=""></a>
-                                    <a href="#pulgarAbajo"><img class="pulgarAbajo" src="img/pulgarAbajo.png" alt=""></a>
-                                </div>
-                                <img  class="cinco" src="img/cincoEstrellas.png" alt="Valoracion: cinco estrellas">
-                            </div>
-                    </article>
-
-                    <article class="reseña">
-                        <h3>Claudia Ledesma</h3>
-                        <p>"Me gustó mucho el diseño de los pantalones MOM que compré. Me hubiera gustado 
-                            ver más opciones en cuanto a estilos, pero la tienda es excelente!"</p>
-                            <div class="valoracion">
-                                <div class="pulgares">
-                                    
-                                    <a href="#pulgarArriba"><img class="pulgarArriba" src="img/pulgarArriba.png" alt=""></a>
-                                    <a href="#pulgarAbajo"><img class="pulgarAbajo" src="img/pulgarAbajo.png" alt=""></a>
-                                </div>
-                                <img class="cuatro" src="img/cuatroEstrellas.png" alt="Valoracion: cinco estrellas">
-                            </div>
-                    </article>
-
-                    <article class="reseña">
-                        <h3>Marcela Quiroga</h3>
-                        <p>"Muy buena selección de ropa y accesorios. Los diseños son originales y modernos, 
-                            justo lo que buscaba para darle un toque diferente a mi look. 
-                            Además, el servicio al cliente fue muy atento cuando tuve dudas sobre las tallas"</p>
-                            <div class="valoracion">
-                                <div class="pulgares">
-                                    <a href="#pulgarArriba"><img class="pulgarArriba" src="img/pulgarArriba.png" alt=""></a>
-                                    <a href="#pulgarAbajo"><img class="pulgarAbajo" src="img/pulgarAbajo.png" alt=""></a>
-                                </div>
-                                <img class="cinco" src="img/cincoEstrellas.png" alt="Valoracion: cinco estrellas">
-                            </div>
-                    </article>
-                </section>
-            </div>
-            <!-- <section id="instructivo">
+            <article class="reseña">
+              <h3>Marcela Quiroga</h3>
+              <p>
+                "Muy buena selección de ropa y accesorios. Los diseños son
+                originales y modernos, justo lo que buscaba para darle un toque
+                diferente a mi look. Además, el servicio al cliente fue muy
+                atento cuando tuve dudas sobre las tallas"
+              </p>
+              <div class="valoracion">
+                <div class="pulgares">
+                  <a href="#pulgarArriba"
+                    ><img
+                      class="pulgarArriba"
+                      src="img/pulgarArriba.png"
+                      alt=""
+                  /></a>
+                  <a href="#pulgarAbajo"
+                    ><img class="pulgarAbajo" src="img/pulgarAbajo.png" alt=""
+                  /></a>
+                </div>
+                <img
+                  class="cinco"
+                  src="img/cincoEstrellas.png"
+                  alt="Valoracion: cinco estrellas"
+                />
+              </div>
+            </article>
+          </section>
+        </div>
+        <!-- <section id="instructivo">
                 <p>Si necesitas algun instructivo de como utilizar la pagina, no dudes en contactarnos mediante
                     nuestras redes sociales!!
                 </p>
             </section> -->
+      </main>
+      <!-- cierro main -->
 
-        </main>
-        <!-- cierro main -->
-
-
-        <footer id="footer">
-            <p><small>Al utilizar este sitio web, aceptas cumplir con estos términos y condiciones. 
-                El contenido es solo para uso personal y no comercial; está prohibido reproducir o distribuir sin autorización previa. 
-                Todos los derechos de propiedad intelectual pertenecen a la empresa, y el uso no autorizado está 
-                prohibido. No nos hacemos responsables de errores en la información proporcionada, y cualquier 
-                uso de esta es bajo tu propio riesgo. Nos reservamos el derecho de modificar estos términos en 
-                cualquier momento sin previo aviso. El uso de este sitio se rige por las leyes aplicables,
-                y cualquier disputa será resuelta en tribunales competentes.</small></p>
-        </footer>
+      <footer id="footer">
+        <p>
+          <small
+            >Al utilizar este sitio web, aceptas cumplir con estos términos y
+            condiciones. El contenido es solo para uso personal y no comercial;
+            está prohibido reproducir o distribuir sin autorización previa.
+            Todos los derechos de propiedad intelectual pertenecen a la empresa,
+            y el uso no autorizado está prohibido. No nos hacemos responsables
+            de errores en la información proporcionada, y cualquier uso de esta
+            es bajo tu propio riesgo. Nos reservamos el derecho de modificar
+            estos términos en cualquier momento sin previo aviso. El uso de este
+            sitio se rige por las leyes aplicables, y cualquier disputa será
+            resuelta en tribunales competentes.</small
+          >
+        </p>
+      </footer>
     </div>
     <!-- cierro contenedor -->
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

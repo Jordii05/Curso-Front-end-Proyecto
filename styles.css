@@ -369,11 +369,11 @@ body{
     justify-content: space-between;
 }
 
-.producto h3{
+.producto h3, .productoAgregado h3{
     font-size: 1.7em;
 }
 
-.producto p{
+.producto p, .productoAgregado p{
     font-size: 1.6em;
     font-weight: 500;
 }
@@ -576,6 +576,48 @@ input{
 
 .informacion-contacto a{
     color: #131313;
+}
+
+
+.productoAgregado{
+  width: 90%;
+  height: auto;
+  background-color: rgb(172, 172, 172);
+  box-shadow: 0 0 0.5em  black;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.agregado{
+  width: 60%;
+  height: auto;
+  background-color: rgb(122, 122, 122);
+  display: flex;
+  margin: 1em auto;
+  text-align: center;
+  vertical-align: middle;
+  
+}
+
+.imagenAgregada{
+  width: 14em;
+  height: 14em;
+}
+
+.eliminar{
+  background-color: red;
+  color: white;
+  height: 3em;
+  width: 7em;
+  border-radius: 0.5em;
+  vertical-align: middle;
+}
+
+.modificarCantidad{
+  height: 2em;
+  width: 2em;
 }
 
 @media screen  and (max-width:768px){
