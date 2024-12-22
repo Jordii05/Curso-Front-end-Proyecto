@@ -597,7 +597,7 @@ input{
 .agregado{
   width: 40%;
   height: auto;
-  background: linear-gradient(rgb(255,255,255),rgb(0,0,0),rgb(255,255,255));
+  background: linear-gradient(rgb(255,255,255),rgb(63, 63, 63)30%,rgb(255,255,255));
   border:  2px solid black;
   border-radius: 1em;  
   margin: 1em auto;
@@ -619,6 +619,7 @@ input{
   width: 7em;
   border-radius: 0.5em;
   vertical-align: middle;
+  margin: 0.8em;
 }
 
 .confirmarCompra{
@@ -649,9 +650,8 @@ input{
 }
 
 #confirmar{
-  font-size: 2em;
+
   margin: auto;
-  width:50%;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif  ;
   margin-top: 0.5em;
@@ -673,11 +673,8 @@ input{
   width: 90%;
   margin: auto;
   text-align: center;
-  border-bottom: 1px solid #444444;
-  border-top: 1px solid #444444;
   margin-bottom: 1em;
   height: 2em;
-  line-height: 2em;
   font-size: 1.8em;
 }
 
@@ -930,8 +927,23 @@ input{
         font-size:1.2em;
     }
     
-    
-
+    #confirmar{
+      font-size: 1.5em;
+      width:90%;
+    }
+    .agregado{
+      width: 80%;
+      height: auto;
+    }
+    #productosAgregados{
+      
+      border-top: 1px solid #444444;
+      margin-bottom: 1em;
+      height: 2em;
+      font-size: 1.8em;
+      padding-top: 0.5em;
+    }
+      
 }
 
 
@@ -1115,7 +1127,16 @@ input{
     .contacto-contenido .informacion-contacto p{
         font-size:1.2em;
     }
-    
+    #productosAgregados{
+      border-bottom: 1px solid #444444;
+      border-top: 1px solid #444444;
+      line-height: 2em;
+
+    }
+    .agregado{
+      width: 60%;
+      height: auto;
+    }
 }
 
 @media screen and (min-width:1024px){
@@ -1268,6 +1289,14 @@ input{
     .contacto-contenido .informacion-contacto p{
         font-size:1.2em;
     }
+    #productosAgregados{
+      border-bottom: 1px solid #444444;
+      border-top: 1px solid #444444;
+      line-height: 2em;
 
-
+    }
+    .agregado{
+      width: 60%;
+      height: auto;
+    }
 }

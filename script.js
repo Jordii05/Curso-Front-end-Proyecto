@@ -143,9 +143,8 @@ const mostrarCarrito = () => {
       <p>Para poder realizar una compra, le sugerimos que seleccione al menos un producto.</p>
       </div>`;
     } else {
-      contenedorCarrito.innerHTML+=`<h3 id="productosAgregados">Productos Agregados</h3>`
+      contenedorCarrito.innerHTML += `<h3 id="productosAgregados">Productos Agregados</h3>`;
       carrito.forEach((producto) => {
-
         if (producto["productosDestacados"]) {
           precioTotal += producto.precio * producto.cantidad;
           html = `
@@ -155,9 +154,11 @@ const mostrarCarrito = () => {
                 <h3>${producto.titulo}</h3>
                 <p>Precio original: <s>$${producto.precios.sinDescuento}</s></p>
                 <p>Con descuento: $${producto.precios.conDescuento}</p>
+                <div class="cantidades">
                 <button class="modificarCantidad" onclick="modificarCantidad( ${producto.id}, -1)">-</button>
                 <label>Cantidad: <span id="cantidad">${producto.cantidad}</span></label>
                 <button class="modificarCantidad" onclick="modificarCantidad( ${producto.id}, 1)">+</button>
+                </div>
                 <button class="eliminar" data-id="${producto.id}">Eliminar</button>
               </div>
             </article>
@@ -260,10 +261,10 @@ document.addEventListener("click", (event) => {
     const cantidadProductos = document.getElementById("cantidadProductos");
     let cantidad = 0;
 
-    if (cantidadProductos){
-      cantidadProductos.innerHTML=cantidad;
+    if (cantidadProductos) {
+      cantidadProductos.innerHTML = cantidad;
     }
-    
+
     localStorage.setItem("cantidadProductos", JSON.stringify(cantidad));
     mostrarCarrito();
   }
@@ -282,7 +283,7 @@ const modificarCantidad = async (idProducto, operacion) => {
   const productoConDescuentoEncontrado = data.productosConDescuento.find(
     (producto) => producto.id === parseInt(idProducto)
   );
-  
+
   if (productoDestacadoEncontrado || productoConDescuentoEncontrado) {
     const contenedorProducto = document.getElementById(idProducto);
     if (contenedorProducto) {
