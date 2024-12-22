@@ -86,6 +86,7 @@ const agregarCarrito = async (idProducto) => {
         id: productoDestacadoEncontrado.id,
         titulo: productoDestacadoEncontrado.titulo,
         precio: productoDestacadoEncontrado.precio,
+        cantidad: productoDestacadoEncontrado.cantidad,
         imagen: productoDestacadoEncontrado.imagen,
         alt: productoDestacadoEncontrado.alt,
       });
@@ -112,6 +113,7 @@ const agregarCarrito = async (idProducto) => {
         titulo: productoConDescuentoEncontrado.titulo,
         precio: productoConDescuentoEncontrado.precios.conDescuento,
         descuento: productoConDescuentoEncontrado.descuento,
+        cantidad: productoConDescuentoEncontrado.cantidad,
         imagen: productoConDescuentoEncontrado.imagenes.producto,
         alt: productoConDescuentoEncontrado.alt,
       });
@@ -132,56 +134,53 @@ const mostrarCarrito = () => {
   //muestra los productos que se agregaron al carrito en el localStorage en el html
   const carrito = JSON.parse(localStorage.getItem("carritoActual")) || [];
   const contenedorCarrito = document.querySelector(".productoAgregado");
-
+  let precioTotal = 0;
   if (contenedorCarrito) {
     contenedorCarrito.innerHTML = "";
 
     if (carrito.length === 0) {
-      contenedorCarrito.innerHTML = `<h3 id="carritoVacio">Carrito vacío</h3>
+      contenedorCarrito.innerHTML = `<div id="sinProductos"><h3 id="carritoVacio">Carrito vacío</h3>
       <p>Para poder realizar una compra, le sugerimos que seleccione al menos un producto.</p>
-      `;
+      </div>`;
     } else {
+      contenedorCarrito.innerHTML+=`<h3 id="productosAgregados">Productos Agregados</h3>`
       carrito.forEach((producto) => {
-        let html = "";
 
         if (producto["productosDestacados"]) {
+          precioTotal += producto.precio * producto.cantidad;
           html = `
-            <article class="agregado">
-              <img class="imagenAgregada" src="${
-                producto.imagenes.producto
-              }" alt="${producto.alt}">
-              <h3>${producto.titulo}</h3>
-              <p>Precio original: <s>$${producto.precios.sinDescuento}</s></p>
-              <p>Con descuento: $${producto.precios.conDescuento}</p>
-              <button class="modificarCantidad" onclick="modificarCantidad(event, ${
-                producto.id
-              }, -1)">-</button>
-              <label>Cantidad: <span id="cantidad">${
-                producto.cantidad || 1
-              }</span></label>
-              <button class="modificarCantidad" onclick="modificarCantidad(event, ${
-                producto.id
-              }, 1)">+</button>
-              <button class="eliminar" data-id="${
-                producto.id
-              }">Eliminar</button>
+            <article id=${producto.id} class="agregado">
+              <img class="imagenAgregada" src="${producto.imagenes.producto}" alt="${producto.alt}">
+              <div class="caracteristicasProducto">
+                <h3>${producto.titulo}</h3>
+                <p>Precio original: <s>$${producto.precios.sinDescuento}</s></p>
+                <p>Con descuento: $${producto.precios.conDescuento}</p>
+                <button class="modificarCantidad" onclick="modificarCantidad( ${producto.id}, -1)">-</button>
+                <label>Cantidad: <span id="cantidad">${producto.cantidad}</span></label>
+                <button class="modificarCantidad" onclick="modificarCantidad( ${producto.id}, 1)">+</button>
+                <button class="eliminar" data-id="${producto.id}">Eliminar</button>
+              </div>
             </article>
           `;
         } else {
+          precioTotal += producto.precio * producto.cantidad;
+
           html = `
-            <article class="agregado">
+            <article  id=${producto.id} class="agregado">
               <img class="imagenAgregada" src="${producto.imagen}" alt="${
             producto.alt
           }">
               <h3>${producto.titulo}</h3>
-              <p>$${producto.precio * (producto.cantidad || 1)}</p>
-              <button class="modificarCantidad" onclick="modificarCantidad(event, ${
+              <p>Precio segun cantidad: $${
+                producto.precio * producto.cantidad
+              }</p>
+              <button class="modificarCantidad" onclick="modificarCantidad( ${
                 producto.id
               }, -1)">-</button>
               <label>Cantidad: <span id="cantidad">${
-                producto.cantidad || 1
+                producto.cantidad
               }</span></label>
-              <button class="modificarCantidad" onclick="modificarCantidad(event, ${
+              <button class="modificarCantidad" onclick="modificarCantidad( ${
                 producto.id
               }, 1)">+</button>
               <button class="eliminar" data-id="${
@@ -193,22 +192,24 @@ const mostrarCarrito = () => {
 
         contenedorCarrito.innerHTML += html;
       });
-      contenedorCarrito.innerHTML += `<h3>Tu satisfacción es nuestra prioridad,</h3>
-          <p>trabajamos para ofrecerte prendas de la mejor calidad, pero entendemos que a veces pueden surgir inconvenientes. Por ese motivo,
-          Si el producto que adquiriste no cumplió con tus expectativas o presenta algún defecto, no te preocupes. Estamos aquí para ayudarte.</p>
+      contenedorCarrito.innerHTML +=
+        `<h3 id="precioTotal">Precio total: $` + precioTotal + `</h3>`;
+      contenedorCarrito.innerHTML += `<div id="botonesDeCompra">
+      <button class="confirmarCompra">Confirmar Compra</button>
+      <button class="vaciar">Vaciar Carrito</button>
+      </div>`;
+    }
+    contenedorCarrito.innerHTML += `<div id="detallesDeCompra">
+            <h3>Nosotros</h3>
+            <p>En EstiloUrbano, nos enorgullece ofrecerte prendas de la más alta calidad, diseñadas con materiales seleccionados y confeccionadas con el máximo cuidado. 
+            Cada detalle de nuestras colecciones está pensado para brindarte comodidad, estilo y durabilidad, porque sabemos que mereces lo mejor. 
+            Si el producto que adquiriste no cumplió con tus expectativas o presenta algún defecto, no te preocupes. Estamos aquí para ayudarte.</p>
           <ul>
           <li>Puedes solicitar un cambio en un plazo de 7 días a partir de la fecha de compra.</li>
           <li>La prenda debe estar en las mismas condiciones en las que fue entregada.</li>
           <li>Solo necesitas traer tu ticket o comprobante de compra.</li>
-
-          <ul>
-          <p>Esperemos que disfrutes de la/s prendas y que nos veamos pronto!.</p>`;
-      contenedorCarrito.innerHTML += `<button class="confirmar">Confirmar Compra</button>`;
-      contenedorCarrito.innerHTML += `<button class="vaciar">Vaciar Carrito</button>`;
-    }
-    contenedorCarrito.innerHTML += `
-            <p>En EstiloUrbano, nos enorgullece ofrecerte prendas de la más alta calidad, diseñadas con materiales seleccionados y confeccionadas con el máximo cuidado. 
-            Cada detalle de nuestras colecciones está pensado para brindarte comodidad, estilo y durabilidad, porque sabemos que mereces lo mejor.</p>`;
+          </ul>
+          <p>Esperemos que disfrutes de la/s prendas y que nos veamos pronto!</p></div>`;
   }
 };
 
@@ -246,18 +247,79 @@ document.addEventListener("click", (event) => {
         JSON.stringify(cantidadProductos)
       );
     }
-
     const cantidad = document.getElementById("cantidadProductos");
     if (cantidad) {
       cantidad.innerHTML = cantidadProductos;
     }
     mostrarCarrito();
   }
+  if (event.target.classList.contains("confirmarCompra")) {
+    alert("Gracias por su compra!");
+    carritoActual = [];
+    localStorage.setItem("carritoActual", JSON.stringify(carritoActual));
+    const cantidadProductos = document.getElementById("cantidadProductos");
+    let cantidad = 0;
+
+    if (cantidadProductos){
+      cantidadProductos.innerHTML=cantidad;
+    }
+    
+    localStorage.setItem("cantidadProductos", JSON.stringify(cantidad));
+    mostrarCarrito();
+  }
 });
 
 mostrarCarrito();
 
-function modificarCantidad() {}//terminar esto
+const modificarCantidad = async (idProducto, operacion) => {
+  //modificamos la cantidad de los productos con su stock correspondiente
+  const response = await fetch("productos.json");
+  const data = await response.json();
+
+  const productoDestacadoEncontrado = data.productosDestacados.find(
+    (producto) => producto.id === parseInt(idProducto)
+  );
+  const productoConDescuentoEncontrado = data.productosConDescuento.find(
+    (producto) => producto.id === parseInt(idProducto)
+  );
+  
+  if (productoDestacadoEncontrado || productoConDescuentoEncontrado) {
+    const contenedorProducto = document.getElementById(idProducto);
+    if (contenedorProducto) {
+      const cantidadDelProducto = contenedorProducto.querySelector("#cantidad");
+
+      if (cantidadDelProducto) {
+        let cantidadDelProductoValor = parseInt(cantidadDelProducto.innerHTML);
+        let nuevaCantidad = cantidadDelProductoValor + operacion;
+
+        if (nuevaCantidad < 1) {
+          console.log("Error, producto mínimo alcanzado.");
+          cantidadDelProducto.innerHTML = 1;
+        } else if (nuevaCantidad > 10) {
+          console.log("Error, stock máximo alcanzado.");
+          cantidadDelProducto.innerHTML = 10;
+        } else {
+          cantidadDelProducto.innerHTML = nuevaCantidad;
+          const carrito =
+            JSON.parse(localStorage.getItem("carritoActual")) || [];
+          const cantidadEncontrada = carrito.find(
+            (producto) => producto.id === idProducto
+          );
+
+          if (cantidadEncontrada) {
+            cantidadEncontrada.cantidad = nuevaCantidad;
+          }
+          console.log(cantidadEncontrada);
+
+          localStorage.setItem("carritoActual", JSON.stringify(carrito));
+          mostrarCarrito();
+        }
+      }
+    } else {
+      console.error("No se encontró el producto con el id:", idProducto);
+    }
+  }
+}; //terminar esto, agregar en el README DE QUE TRATA EL PROYECTO
 
 //inicializaciones
 

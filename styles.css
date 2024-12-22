@@ -579,25 +579,31 @@ input{
 }
 
 
+
+
+
 .productoAgregado{
   width: 90%;
   height: auto;
-  background-color: rgb(172, 172, 172);
-  box-shadow: 0 0 0.5em  black;
+  /* background-color: rgb(255, 255, 255); */
+  /* box-shadow: 0 0 0.5em  black; */
   margin: auto;
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   padding: 1em 0;
 }
 
 .agregado{
-  width: 60%;
+  width: 40%;
   height: auto;
-  background-color: rgb(122, 122, 122);
-  display: flex;
+  background: linear-gradient(rgb(255,255,255),rgb(0,0,0),rgb(255,255,255));
+  border:  2px solid black;
+  border-radius: 1em;  
   margin: 1em auto;
   text-align: center;
   vertical-align: middle;
+  justify-content: space-around;
   
 }
 
@@ -615,10 +621,94 @@ input{
   vertical-align: middle;
 }
 
+.confirmarCompra{
+  background-color: rgb(0, 69, 219);
+  color: white;
+  height: 3em;
+  width: 9em;
+  border-radius: 0.5em;
+  vertical-align: middle;
+}
+
+.vaciar{
+  background-color: red;
+  color: white;
+  height: 3em;
+  width: 9em;
+  border-radius: 0.5em;
+  vertical-align: middle;
+}
+
+#precioTotal{
+  text-align: center;
+  margin-bottom: 0.5em;
+}
 .modificarCantidad{
   height: 2em;
   width: 2em;
 }
+
+#confirmar{
+  font-size: 2em;
+  margin: auto;
+  width:50%;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif  ;
+  margin-top: 0.5em;
+  text-transform: uppercase;
+  color: #f31313;
+  text-shadow: 0 3px 3px #444444;
+}
+
+#sinProductos{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  border-bottom: 1px solid #444444;
+  border-top: 1px solid #444444;
+  margin-bottom: 1em;
+}
+
+#productosAgregados{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  border-bottom: 1px solid #444444;
+  border-top: 1px solid #444444;
+  margin-bottom: 1em;
+  height: 2em;
+  line-height: 2em;
+  font-size: 1.8em;
+}
+
+#carritoVacio{
+  font-size: 1.8em;
+  
+}
+
+#detallesDeCompra{
+  font-size: 0.8em;
+  text-align: justify;
+  margin-top: 1em;
+}
+#detallesDeCompra h3{
+  font-size: 2em;
+  font-style: italic;
+}
+
+#detallesDeCompra ul{
+  list-style: none;
+  margin: 0.5em 0;
+  font-size: 1.2em;
+}
+
+#botonesDeCompra{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
 
 @media screen  and (max-width:768px){
     
