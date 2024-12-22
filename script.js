@@ -16,7 +16,7 @@ const mostrarProductos = async () => {
           <h3>${producto.titulo}</h3>
           <p>$${producto.precio}</p>
           <div class="detalles">
-            <button type="submit" onclick="agregarCarrito(${producto.id})" ><h3>${producto.detalles.carrito}</h3></button>
+            <button class="agregar"  type="submit" onclick="agregarCarrito(${producto.id},event)" ><h3>${producto.detalles.carrito}</h3></button>
             <h4><a href="#">${producto.detalles.enlace}</a></h4>
           </div>
         </article>
@@ -44,7 +44,7 @@ const mostrarProductos = async () => {
             </div>
             <hr>
             <div class="detalles">
-              <button type="submit" onclick="agregarCarrito(${producto.id})"><h3>${producto.detalles.carrito}</h3></button>
+              <button class="agregar" type="submit" onclick="agregarCarrito(${producto.id},event)"><h3>${producto.detalles.carrito}</h3></button>
               <h4><a href="#">${producto.detalles.enlace}</a></h4>
             </div>
           </article>
@@ -57,7 +57,7 @@ const mostrarProductos = async () => {
   }
 };
 
-const agregarCarrito = async (idProducto) => {
+const agregarCarrito = async (idProducto,event) => {
   //agrega de forma dinamica el producto seleccionado al localStorage verificando si existe en el json
   try {
     const response = await fetch("productos.json");
@@ -70,6 +70,11 @@ const agregarCarrito = async (idProducto) => {
       (producto) => producto.id === parseInt(idProducto)
     );
     if (productoDestacadoEncontrado) {
+      const boton = event.target.closest("button");
+      boton.disabled=true;
+      boton.style.backgroundColor="red"
+      boton.innerHTML="Producto Agregado"
+      
       console.log("Producto encontrado:", productoDestacadoEncontrado);
       const cantidad = document.getElementById("cantidadProductos");
       cantidadProductos++;
@@ -96,6 +101,10 @@ const agregarCarrito = async (idProducto) => {
       localStorage.setItem("carritoActual", JSON.stringify(carritoActual));
       mostrarCarrito();
     } else if (productoConDescuentoEncontrado) {
+      const boton = event.target.closest("button");
+      boton.disabled=true;
+      boton.style.backgroundColor="red"
+      boton.innerHTML="Producto Agregado"
       console.log("Producto encontrado:", productoConDescuentoEncontrado);
       const cantidad = document.getElementById("cantidadProductos");
       cantidadProductos++;
