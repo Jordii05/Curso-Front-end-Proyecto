@@ -69,25 +69,20 @@
           id="formulario"
           action="https://formsubmit.co/jorcaslo05@gmail.com"
           method="post"
+          
         >
-          <h3 id="problema">Cuentenos su problema!</h3>
+        <h3 id="problema">Cuentenos su problema!</h3>
+
           <div id="campos">
             <label for="nombre">Nombre</label
-            ><input
-              id="nombre"
-              type="text"
-              placeholder="Ingrese su nombre"
-              required
-            />
+            ><input id="nombre" type="text" placeholder="Ingrese su nombre" />
+            <span id="errorNombre"></span>
             <label for="email">Email</label
-            ><input
-              id="email"
-              type="email"
-              placeholder="Ingrese su email"
-              required
-            />
+            ><input id="email" type="email" placeholder="Ingrese su email" />
+            <span id="errorMail"></span>
 
             <label for="consulta">Ingrese su consulta</label>
+            <span id="errorMensaje"></span>
 
             <textarea
               name="mensaje"
@@ -95,7 +90,6 @@
               cols="30"
               rows="10"
               placeholder="Ingrese su comentario..."
-              required
             ></textarea>
 
             <button id="enviar" type="submit">Enviar</button>
@@ -134,7 +128,7 @@
         <p>Nos comunicaremos a la brevedad, disculpe las molestias</p>
       </footer>
     </div>
+    <script src="formulario.js"></script>
     <script src="script.js"></script>
-
   </body>
 </html>

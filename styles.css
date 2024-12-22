@@ -520,11 +520,21 @@ input{
     height: 2.5em;
     width: 15em;
     margin-bottom: 1em;
+    padding-left: 0.5em;
 }
 
 #mensaje{
     display: block;
+    padding-left: 0.5em;
 }
+
+#errorNombre,#errorMail,#errorMensaje{
+  font-style: oblique;
+  margin: 0.5em;
+  color: #6b0909;
+}
+
+
 
 #formulario{
     width: 100%;
@@ -942,6 +952,12 @@ input{
       height: 2em;
       font-size: 1.8em;
       padding-top: 0.5em;
+    }
+
+    #errorNombre,#errorMail,#errorMensaje{
+      display: block;
+      margin-bottom: 0.8em;
+      margin-top: 0;
     }
       
 }
